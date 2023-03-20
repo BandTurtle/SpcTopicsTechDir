@@ -19,6 +19,7 @@ class Memory{
   public:
     Memory(int In, int Out, bool UseButt);
     Memory();
+    void ResetAll(int In, int Out, bool UseButt);
     void ResetIn(int In, bool UseButt);
     void ResetOut(int out);
     bool GetOut();

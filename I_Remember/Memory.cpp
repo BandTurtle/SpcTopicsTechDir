@@ -30,6 +30,20 @@ Memory::Memory() :
   CheckVal();
 }
 
+void Memory::ResetAll(int In, int Out, bool UseButt){
+    LEDPin = Out;
+  OutLight.ResetPin(LEDPin);
+  BUTTPin = In;
+  UsingButt = UseButt;
+  if (UsingButt == true){
+    InButt.ResetPin(BUTTPin);
+  }
+  val = 0;
+  GetIn();  
+  GetOut();
+  CheckVal();  
+}
+
 
 
 bool Memory::GetOut(){
